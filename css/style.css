@@ -50,8 +50,6 @@ body {
 }
 
 .container {
-  width: 1199px;
-  margin: 0 auto;
   padding: 0 15px;
 }
 
@@ -83,12 +81,24 @@ body {
   font-weight: bold;
 }
 
+@media screen and (max-width: 1280px) {
+  .header .header-top {
+    padding-top: 20px;
+  }
+}
+
 .header .header-top .header-top__img {
   width: 150px;
 }
 
 .header .header-top nav ul.menu {
   float: right;
+}
+
+@media screen and (max-width: 1280px) {
+  .header .header-top nav ul.menu {
+    display: none;
+  }
 }
 
 .header .header-top nav ul.menu > li {
@@ -531,17 +541,30 @@ h2 {
 .testmonial {
   padding-top: 100px;
   padding-bottom: 70px;
-  margin-top: 400px;
+  margin-top: 200px;
   background-image: url("../img/bg3.png");
   background-color: #896eff;
+}
+
+@media screen and (max-width: 1279.98px) {
+  .testmonial {
+    margin-top: 0;
+  }
 }
 
 .testmonial .col .testmonial-cart {
   background: #fff;
   border-radius: 10px;
   padding: 30px;
+  margin: 0 10px;
   -webkit-box-shadow: 0 0 10px 4px #1f42871a;
           box-shadow: 0 0 10px 4px #1f42871a;
+}
+
+@media screen and (max-width: 1279.98px) {
+  .testmonial .col .testmonial-cart {
+    margin-bottom: 20px;
+  }
 }
 
 .testmonial .col .testmonial-cart .cart-text {
@@ -558,6 +581,14 @@ h2 {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+@media screen and (max-width: 1279.98px) {
+  .testmonial .col .testmonial-cart .cart-info {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
 }
 
 .testmonial .col .testmonial-cart .cart-info .cart-info__img {
@@ -588,6 +619,12 @@ h2 {
 
 .testmonial .col .testmonial-text {
   color: #fff;
+}
+
+@media screen and (max-width: 1279.98px) {
+  .testmonial .col .testmonial-text {
+    text-align: center;
+  }
 }
 
 .testmonial .arrow {
@@ -738,7 +775,7 @@ h2 {
 .footer {
   background-image: url("/img/bg10.png");
   background-color: #896eff;
-  padding: 30px 0;
+  padding-top: 30px;
 }
 
 .footer .footer-top .footer-info {

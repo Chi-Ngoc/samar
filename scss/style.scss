@@ -18,10 +18,19 @@ $color: #1f2471;
 @mixin padding-top-bottom {
   padding-top: 100px;
   padding-bottom: 70px;
+  @media screen and (max-width: 1280px) {
+    // padding-top: 0;
+    // bottom: 0;
+  }
+  
 }
-@mixin box-shadow {
+@mixin box-shadow-1 {
   box-shadow: 0 0 10px 4px #1f42871a;
 }
+@mixin box-shadow-2 {
+  box-shadow: 0 36px 48px #1f42871a;
+}
+
 @mixin animation {
   animation: leftright 2s infinite alternate;
 }
@@ -36,6 +45,8 @@ $color: #1f2471;
   line-height: $width;
   text-align: center;
 }
+
+
 
 //reset
 * {
@@ -69,8 +80,8 @@ body {
 
 //container
 .container {
-  width: 1199px;
-  margin: 0 auto;
+  // width: 1199px;
+  // margin: 0 auto;
   padding: 0 15px;
 }
 
@@ -98,12 +109,19 @@ body {
     position: relative;
     z-index: 10;
     font-weight: bold;
+    @media screen and (max-width: 1280px){
+      padding-top: 20px;
+    }
     .header-top__img {
       width: 150px;
     }
     nav {
       ul.menu {
         float: right;
+        @media screen and (max-width: 1280px) {
+          display: none;
+        }
+        
         > li {
           display: inline-block;
           position: relative;
@@ -272,7 +290,7 @@ body {
       transform: scale(1);
     }
     &:hover {
-      @include box-shadow;
+      @include box-shadow-1;
     }
   }
 }
@@ -424,7 +442,7 @@ h2 {
     float: left;
     margin: 0 15px;
     position: relative;
-    box-shadow: 0 36px 48px #1f42871a;
+    @include box-shadow-2;
     border-radius: 10px;
     height: auto;
     .team-profile__img {
@@ -434,7 +452,7 @@ h2 {
     }
     .team-profile__name {
       display: flex;
-      box-shadow: 0 36px 48px #1f42871a;
+      @include box-shadow-2;
       padding: 30px;
       align-items: center;
       justify-content: space-between;
@@ -477,7 +495,10 @@ h2 {
 //testmonial
 .testmonial {
   @include padding-top-bottom;
-  margin-top: 400px;
+  @media screen and (max-width: 1279.98px) {
+  margin-top: 0;
+  }
+  margin-top: 200px;
   background-image: url("../img/bg3.png");
   background-color: $secondary-color;
   .col {
@@ -485,7 +506,12 @@ h2 {
       background: #fff;
       border-radius: 10px;
       padding: 30px;
-      @include box-shadow;
+      margin: 0 10px;
+      @include box-shadow-1;
+      @media screen and (max-width: 1279.98px) {
+      margin-bottom: 20px;
+      }
+      
       .cart-text {
         border-bottom: 1px solid #e1e1f0;
         padding: 0 0 20px;
@@ -495,6 +521,10 @@ h2 {
       .cart-info {
         display: flex;
         align-items: center;
+        @media screen and (max-width: 1279.98px) {
+          justify-content: center;
+        }
+        
         .cart-info__img {
           width: 70px;
           height: 70px;
@@ -525,6 +555,10 @@ h2 {
     }
     .testmonial-text {
       color: #fff;
+      @media screen and (max-width: 1279.98px) {
+       text-align: center;
+      }
+      
     }
   }
   .arrow {
@@ -584,7 +618,7 @@ h2 {
         .form-input__text {
           width: 100%;
           .from-control {
-            @include box-shadow;
+            @include box-shadow-1;
             height: 45px;
             border-radius: 20px;
             padding: 10px 50px;
@@ -650,7 +684,7 @@ h2 {
 .footer {
   background-image: url("/img/bg10.png");
   background-color: $secondary-color;
-  padding: 30px 0;
+  padding-top: 30px;
   .footer-top {
     .footer-info {
       border-bottom: 1px solid #e1e1f0;

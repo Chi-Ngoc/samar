@@ -44,6 +44,7 @@ Tư duy khi làm việc với grid system có breckpoint (Desktop first)
 
 .row-center {
   justify-content: center;
+  align-items: center;
 }
 
 .row-collapse {
@@ -131,66 +132,64 @@ Tư duy khi làm việc với grid system có breckpoint (Desktop first)
   padding: 0;
 }
 
-@media screen and (min-width: 1400px) {
-  .col-1 {
-    max-width: calc(100% / (12 / 1));
-    flex-basis: calc(100% / (12 / 1));
-  }
+.col-1 {
+  max-width: calc(100% / (12 / 1));
+  flex-basis: calc(100% / (12 / 1));
+}
 
-  .col-2 {
-    max-width: calc(100% / (12 / 2));
-    flex-basis: calc(100% / (12 / 2));
-  }
+.col-2 {
+  max-width: calc(100% / (12 / 2));
+  flex-basis: calc(100% / (12 / 2));
+}
 
-  .col-3 {
-    max-width: calc(100% / (12 / 3));
-    flex-basis: calc(100% / (12 / 3));
-  }
+.col-3 {
+  max-width: calc(100% / (12 / 3));
+  flex-basis: calc(100% / (12 / 3));
+}
 
-  .col-4 {
-    max-width: calc(100% / (12 / 4));
-    flex-basis: calc(100% / (12 / 4));
-  }
+.col-4 {
+  max-width: calc(100% / (12 / 4));
+  flex-basis: calc(100% / (12 / 4));
+}
 
-  .col-5 {
-    max-width: calc(100% / (12 / 5));
-    flex-basis: calc(100% / (12 / 5));
-  }
+.col-5 {
+  max-width: calc(100% / (12 / 5));
+  flex-basis: calc(100% / (12 / 5));
+}
 
-  .col-6 {
-    max-width: calc(100% / (12 / 6));
-    flex-basis: calc(100% / (12 / 6));
-  }
+.col-6 {
+  max-width: calc(100% / (12 / 6));
+  flex-basis: calc(100% / (12 / 6));
+}
 
-  .col-7 {
-    max-width: calc(100% / (12 / 7));
-    flex-basis: calc(100% / (12 / 7));
-  }
+.col-7 {
+  max-width: calc(100% / (12 / 7));
+  flex-basis: calc(100% / (12 / 7));
+}
 
-  .col-8 {
-    max-width: calc(100% / (12 / 8));
-    flex-basis: calc(100% / (12 / 8));
-  }
+.col-8 {
+  max-width: calc(100% / (12 / 8));
+  flex-basis: calc(100% / (12 / 8));
+}
 
-  .col-9 {
-    max-width: calc(100% / (12 / 9));
-    flex-basis: calc(100% / (12 / 9));
-  }
+.col-9 {
+  max-width: calc(100% / (12 / 9));
+  flex-basis: calc(100% / (12 / 9));
+}
 
-  .col-10 {
-    max-width: calc(100% / (12 / 10));
-    flex-basis: calc(100% / (12 / 10));
-  }
+.col-10 {
+  max-width: calc(100% / (12 / 10));
+  flex-basis: calc(100% / (12 / 10));
+}
 
-  .col-11 {
-    max-width: calc(100% / (12 / 11));
-    flex-basis: calc(100% / (12 / 11));
-  }
+.col-11 {
+  max-width: calc(100% / (12 / 11));
+  flex-basis: calc(100% / (12 / 11));
+}
 
-  .col-12 {
-    max-width: 100%;
-    flex-basis: 100%;
-  }
+.col-12 {
+  max-width: 100%;
+  flex-basis: 100%;
 }
 
 @media screen and (max-width: 1399px) {
@@ -200,7 +199,7 @@ Tư duy khi làm việc với grid system có breckpoint (Desktop first)
 }
 
 /*Màn hình máy tính nhỏ*/
-@media screen and (min-width: 1200px) and (max-width: 1399px) {
+@media screen and (max-width: 1400px) {
   /*
     Chuyển tất cả các cột của màn hình máy tính lớn => 1 cột khi màn hình chuyển sang màn hình máy tính nhỏ
     */
@@ -284,7 +283,7 @@ Tư duy khi làm việc với grid system có breckpoint (Desktop first)
 }
 
 /*Ipad nằm ngang*/
-@media screen and (min-width: 992px) and (max-width: 1199px) {
+@media screen and (max-width: 1200px) {
   .col-lg-1,
   .col-lg-2,
   .col-lg-3,
@@ -364,7 +363,7 @@ Tư duy khi làm việc với grid system có breckpoint (Desktop first)
 }
 
 /*Ipad nằm dọc*/
-@media screen and (min-width: 768px) and (max-width: 991px) {
+@media screen and (max-width: 992px) {
   .col-md-1,
   .col-md-2,
   .col-md-3,
@@ -444,7 +443,7 @@ Tư duy khi làm việc với grid system có breckpoint (Desktop first)
 }
 
 /*Màn hình ipad mini*/
-@media screen and (min-width: 576px) and (max-width: 767px) {
+@media screen and (max-width: 768px) {
   .col-sm-1,
   .col-sm-2,
   .col-sm-3,
